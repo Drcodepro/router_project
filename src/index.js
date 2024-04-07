@@ -1,34 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Layout from './Layout/Layout';
-import Home from './component/Home/Home';
-import About from "./component//About/About";
+import App from './App';
+// import Layout from './Layout/Layout';
+// import Home from './component/Home/Home';
+// import About from "./component//About/About";
+// // import {Route, RouterProvider,createBrowserRouter,createRoutesFromElement } from "react-router-dom";
+// import {RouterProvider,createBrowserRouter } from "react-router-dom";
+// import Contact from './component/ContactUs/Contact';
+// import User from './component/User/User';
+// import Github, { githubInfoLoader } from './component/Github/Github';
 import reportWebVitals from './reportWebVitals';
-// import {Route, RouterProvider,createBrowserRouter,createRoutesFromElement } from "react-router-dom";
-import {RouterProvider,createBrowserRouter } from "react-router-dom";
-import Contact from './component/ContactUs/Contact';
-import User from './component/User/User';
 
-const router = createBrowserRouter([
-  {path:'/',
-   element:<Layout/>,
-   children:[
-    {path:"",
-     element:<Home/>
-    },
-    {path:"about",
-     element:<About/>
-    },
-    {path:"contact",
-     element:<Contact/>
-    },
-    {path:"user/:userid",// :userid  tells that here parameters will be dynamic
-    element:<User/> // in the User component we can acces this : parameters by using {usePrams}
-   },
-   ]
-  }
-])
+
+// const router = createBrowserRouter([
+//   {path:'/',
+//    element:<Layout/>,
+//    children:[
+//     {
+//      path:"",
+//      element:<Home/>
+//     },
+//     {
+//      path:"about",
+//      element:<About/>
+//     },
+//     {
+//      path:"contact",
+//      element:<Contact/>
+//     },
+//     {
+//      path:"user/:userid",// :userid  tells that here parameters will be dynamic
+//      element:<User/> // in the User component we can acces this : parameters by using {usePrams}
+//    },
+//    {
+//     path:"github",
+//      element:<Github/>
+//     },
+//    ]
+//   }
+// ])
 
 ///  another wayyyyyy
 
@@ -49,7 +60,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+  <App/>
   </React.StrictMode>
 );
 
